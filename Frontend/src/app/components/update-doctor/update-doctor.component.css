@@ -1,0 +1,43 @@
+.parent {
+  /* display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 82vh; */
+  padding-top: 25vh;
+  max-width: 700px;
+  
+}
+
+.centered-text {
+  
+  text-align: center;
+}
+
+.button{
+  align-items: center;
+}
+h1 {
+  font-family: Arial, sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  animation: bounce 1s ease infinite; 
+}
+
+
+h1 {
+  /* background-color: #2ed0c8; */
+  padding: 10px 20px;
+  border-radius: 10px;
+  /* box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1); */
+}
+
+h1:hover {
+  background-color: #78D6C6;
+  color: white;
+}

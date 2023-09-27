@@ -1,0 +1,33 @@
+<section class="container text-center parent">
+    <div class="container child">
+        <h1 class="display-4">Add a new Doctor</h1>
+        <br>
+        <!-- <div class="{{ alertClass}}" role="alert">
+            {{textMessage}}
+        </div> -->
+        <br>
+        <form class="form" #data="ngForm" (submit)="addDoctor()">
+            <div class="form-group row">
+                <label class="col-4 form-label">Doctor Name</label>
+                <div class="col-8 pl-0">
+                    <input type="text" required class="form-control" pattern="[a-zA-Z]+$"  [(ngModel)]="doctorModel.DoctorName" #name="ngModel" name="doctorName" >
+                    <br/>
+                    <span class="alert alert-danger" role="alert"  *ngIf=" (name.touched && name.invalid)">Enter a valid Name</span>
+                </div>
+            </div>
+            <div class="form-group row" *ngIf="!loading">
+                <label class="col-2"></label>
+                <button type="submit" [disabled]="data.form.invalid"  class="col-3 btn-lg btn btn-primary">Add Doctor</button>
+                <label class="col-2"></label>
+                <a routerLink='/home' class="col-3 btn-lg btn btn-danger">Cancel</a>
+                <label class="col-2"></label>
+            </div>
+            <br>
+<app-spinner *ngIf="loading"></app-spinner>
+            <!-- <div class="form-group row text-left">
+                <label class="col-4"></label>
+                <div class="text-danger">{{message}}</div>
+            </div>    -->
+        </form>
+    </div>
+</section>

@@ -1,0 +1,45 @@
+<nav id="mainNavbar" class="navbar navbar-expand-lg navbar-light   ">
+    
+    <a class="navbar-brand" routerLink="/home">
+    <fa-icon class="col-2 pt-2 connect " [icon]="faHospital"></fa-icon>
+       
+        <p class="h1 font-italic font-weight-bold">CureWell</p>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+        (click)="toggleCollapsed()">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div id="navbarSupportedContent" [ngClass]="{'collapse': collapsed, 'navbar-collapse': true}">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link h5" routerLink="/doctor" routerLinkActive="active-link">
+                    <h4>View Doctors</h4><span class="sr-only">(current)</span>
+                </a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link h5 " routerLink="/specialization" routerLinkActive="active-link">
+                    <h4 >View Specializations</h4>
+                </a>
+               
+
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link h5" routerLink="/todaySurgery" routerLinkActive="active-link">
+                    <h4>View Today's Surgery</h4>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link h5" routerLink="/addDoctor" routerLinkActive="active-link">
+                    <h4>Add Doctor</h4>
+                </a>
+            </li>
+        </ul>
+
+        <div class="form-inline my-2 my-lg-0">
+            <button *ngIf="!isLoggedIn" (click)="onLogin()" class="btn btn-primary"> Login</button>
+            <button *ngIf="isLoggedIn" (click)="onLogout()" class="btn btn-danger"> Logout</button>
+        </div>
+    </div>
+</nav>

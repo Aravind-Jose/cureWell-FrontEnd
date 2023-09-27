@@ -1,0 +1,39 @@
+<section class="container text-center parent">
+    <div class="container child">
+        <h1 class="display-4">Update Doctor</h1>
+        <br>
+        <!-- <div class="{{alertClass}}" role="alert">
+            {{textMessage}}
+        </div> -->
+        <br>
+        <form class="form" #data="ngForm" (submit)="updateDoctor()">
+            <div class="form-group row">
+                <label class="col-4 form-label">Doctor Id</label>
+                <div class="col-8 pl-0">
+                    <input readonly type="number" class="form-control" #id="ngModel" name="doctorId"
+                        [(ngModel)]="doctorModel.DoctorId" ngModel>
+                    <span *ngIf="id.invalid">Enter a valid Id </span>
+                </div>
+            </div>
+            <div class="form-group row ">
+                <label class="col-4 form-label">Doctor Name</label>
+                <div class="col-8 pl-0">
+                    <input required type="text" class="form-control" #name="ngModel" name="doctorName"
+                        [(ngModel)]="doctorModel.DoctorName" ngModel>
+                    <div *ngIf="name.touched &&  name.invalid" class="alert alert-danger" role="alert">Name is Required
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row " *ngIf="!loading">
+                <label class="col-2"></label>
+                <button [disabled]="data.invalid" type="submit" class="form-control col-3 btn btn-primary btn-lg">Update</button>
+                <label class="col-2"></label>
+                <a href="/home" class="form-control col-3 btn btn-danger btn-lg">Cancel</a>
+                <label class="col-2"></label>
+            </div>
+            <app-spinner *ngIf="loading"></app-spinner>
+        </form>
+    </div>
+</section>
+
+

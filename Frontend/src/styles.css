@@ -1,0 +1,8 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+    font-family: "Times New Roman", Times, serif;
+    background-image: url("https://img.freepik.com/free-vector/clean-medical-background_53876-97927.jpg?w=1060&t=st=1695801165~exp=1695801765~hmac=1dfdd30c51bee398a407717adabdac56ca35b71a046bd30040c04625b043dbab");
+
+    background-size: cover;
+    
+}

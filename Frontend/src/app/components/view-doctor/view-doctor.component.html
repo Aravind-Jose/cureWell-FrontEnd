@@ -1,0 +1,51 @@
+<section class="container text-center parent">
+  <div class="container child">
+    <h1 class="display-4">View Doctors</h1>
+    <br>
+
+    <table border="1" class="table table-bordered center" *ngIf="!loading">
+      <thead class="thead thead-dark">
+        <tr>
+          <th>Doctor ID</th>
+          <th>Doctor Name</th>
+          <th>Action</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let doctor of doctors">
+          <td>{{doctor.DoctorId}}</td>
+          <td>{{doctor.DoctorName}}</td>
+          <td>
+            <button (click)="editDoctor(doctor)" class="btn btn-primary">Edit Doctor Details</button>
+          </td>
+          <td>
+            <button (click)="deleteDoctor(doctor.DoctorId)" class="btn btn-danger">Remove Doctor</button>
+
+          </td>
+        </tr>
+
+      </tbody>
+
+
+      <!-- Remove message -->
+      <!-- <div class="card-body" class="alert alert-success " role="alert" *ngIf="deleteMsg" ngModel>
+            Removed Doctor SuccessFully !
+          </div> -->
+
+      <!-- Fetch message -->
+      <!-- <div>
+        <span class="alert alert-danger text-danger" role="alert" *ngIf="!couldFetch">No Doctors Present In the
+          Record..!</span>
+      </div> -->
+
+    </table>
+    <br>
+  </div>
+  <!-- <div class="alert  alert-dismissible fade show" role="alert" *ngIf="couldFetch" ngModel>
+    <h5><strong>{{showMsgDiv}}</strong></h5>
+  </div> -->
+  
+</section>
+<br>
+<app-spinner *ngIf="loading"></app-spinner>

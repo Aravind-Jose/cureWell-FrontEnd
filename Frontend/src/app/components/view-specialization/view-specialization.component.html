@@ -1,0 +1,31 @@
+<section class="container text-center parent">
+    <div class="container child">
+        <h1 class="display-4 ">View Specializations</h1>
+        <br>
+        <!-- <div class="{{ alertClass}}" role="alert">
+            {{textMessage}}
+        </div> -->
+        <br>
+        <table class="table center table-bordered" *ngIf="!loading">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Specialization Code</th>
+                    <th>Specialization Name</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let specialization of specializations">
+                    <td>{{specialization.SpecializationCode}}</td>
+                    <td>{{specialization.SpecializationName}}</td>
+                    <td>
+                        <button class="btn btn-primary" (click)="viewDoctor(specialization)">View Doctors</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        
+    </div>
+</section>
+<br>
+<app-spinner *ngIf="loading"></app-spinner>

@@ -1,0 +1,17 @@
+nav{
+
+    background-color: #78D6C6;
+  
+  }
+.footer{
+    background-color:#78D6C6;
+    text-align: center;
+    /* position: fixed;
+    bottom: 0; */
+    margin-top: 25vh;
+    padding: 10px 0 10px 0;
+}
+
+.connect{
+    font-size: 30px;
+}

@@ -1,0 +1,41 @@
+.container{
+    margin-left: 10px;
+    margin-top: 100px;
+}
+h1 {
+    font-family: Arial, sans-serif;
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    animation: bounce 1s ease infinite; 
+  }
+  
+  
+  @keyframes bounce {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  h1 {
+    /* background-color: #2ed0c8; */
+    padding: 10px 20px;
+    border-radius: 10px;
+    /* box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1); */
+  }
+  
+  h1:hover {
+    /* background-color: #ff8c66; */
+    color: #78D6C6;
+  }

@@ -1,0 +1,56 @@
+.row{
+
+    padding: 0;
+
+    margin: 0;
+
+}
+
+.card-deck {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+  }
+
+
+.card-image{
+
+    font-size: 40px;
+
+}
+
+ 
+
+.doc-img{
+
+    width: 400px;
+
+}
+
+ 
+
+ 
+
+.parent {
+
+    /* display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    min-height: 82vh; */
+
+    padding-top: 25vh;
+
+    max-width: 700px;
+
+    /* min-height: 50vh; */
+
+}
+
+
+
+
+
+
