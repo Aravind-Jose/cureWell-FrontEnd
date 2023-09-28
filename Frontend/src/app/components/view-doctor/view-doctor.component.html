@@ -3,25 +3,24 @@
     <h1 class="display-4">View Doctors</h1>
     <br>
 
-    <table border="1" class="table table-bordered center" *ngIf="!loading">
-      <thead class="thead thead-dark">
+    <table border="1" class="table table-bordered text-center" *ngIf="!loading">
+      <thead class="thead text-center thead-dark">
         <tr>
           <th>Doctor ID</th>
           <th>Doctor Name</th>
-          <th>Action</th>
+          <th>Edit</th>
           <th>Delete</th>
         </tr>
       </thead>
       <tbody>
         <tr *ngFor="let doctor of doctors">
-          <td>{{doctor.DoctorId}}</td>
-          <td>{{doctor.DoctorName}}</td>
+          <td class="pt-4">{{doctor.DoctorId}}</td>
+          <td class="pt-4">{{doctor.DoctorName}}</td>
           <td>
-            <button (click)="editDoctor(doctor)" class="btn btn-primary">Edit Doctor Details</button>
+            <button (click)="editDoctor(doctor)" class="btn btn-primary">Edit Doctor</button>
           </td>
           <td>
             <button (click)="deleteDoctor(doctor.DoctorId)" class="btn btn-danger">Remove Doctor</button>
-
           </td>
         </tr>
 
