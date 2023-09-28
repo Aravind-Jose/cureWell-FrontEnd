@@ -1,8 +1,9 @@
 <section class="container text-center parent">
-  <div class="container child">
+  
+    <div class="container child">
     <h1 class="display-4">Update Surgery</h1>
     <br>
-    <form [formGroup]="surgeryForm" class="text-center" (submit)="updateSurgery()">
+    <form [formGroup]="surgeryForm" class="text-left" (submit)="updateSurgery()">
       <div class="form-group row">
         <div class="col-2"></div>
         <label for="surgeryId" class="col-3 col-form-label">Surgery Id</label>
@@ -80,6 +81,6 @@
       </div>
       <app-spinner *ngIf="loading"></app-spinner>
     </form>
-
   </div>
+  
 </section>

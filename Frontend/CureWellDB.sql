@@ -1,3 +1,4 @@
+
 create database capstoneproject
 
 use capstoneproject
@@ -50,7 +51,7 @@ DoctorID int foreign key references Doctor(DoctorID)constraint notnull_DoctorId 
 SurgeryDate Date constraint notnull_SurgeyDate not null,
 StartTime decimal(4,2)  not null,
 EndTime decimal(4,2)  not null,
-SurgeryCategory char(3) constraint notnull_SurgeryCategory not null
+SurgeryCategory char(3) references Specialization(SpecializationCode)
 )
 
 insert into Surgery values

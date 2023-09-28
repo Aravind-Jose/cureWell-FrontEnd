@@ -7,10 +7,13 @@ export function timeCheck(StartTime: string, EndTime: string) {
         if (!startTime || !endTime) {
             return null;
         }
-        if(startTime.errors||endTime.errors){
+        if(startTime.errors){
            return null;
         }
         if (Number(startTime.value) >= Number(endTime.value)) {
+            if(Number(endTime.value)==0){
+                return null;
+            }           
             endTime.setErrors({ timeError: true });
         } else {
             endTime.setErrors(null);

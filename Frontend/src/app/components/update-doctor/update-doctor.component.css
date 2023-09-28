@@ -29,15 +29,54 @@ h1 {
   animation: bounce 1s ease infinite; 
 }
 
-
 h1 {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 36px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  animation: bounce 1s ease infinite;
   /* background-color: #2ed0c8; */
   padding: 10px 20px;
-  border-radius: 10px;
-  /* box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1); */
+  /* border-radius: 10px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1); */
 }
 
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
 h1:hover {
-  background-color: #78D6C6;
-  color: white;
+  /* background-color: #ff8c66; */
+  color: #78D6C6;
+  text-shadow: -1px 1px 1px #000;
+
+}
+.container1 {
+  background-color: rgba(154, 190, 187, 0.4);
+  /* color: white; */
+  /* border: 1px solid #423e3e; Border color and thickness */
+  box-shadow: 3px 3px 5px 0 rgba(7, 7, 7, 0.5);
+  /* Shadow properties */
+  padding: 50px;
+  /* Optional padding for content */
+  text-align: center;
+  /* Optional text alignment */
+  margin: 20px auto;
+  /* Optional centering */
+  border-radius: 10px;
 }

@@ -62,11 +62,14 @@ h1 {
     box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1); */
 }
 
+
+
 h1:hover {
   /* background-color: #ff8c66; */
-  color: white;
-}
+  color: #78D6C6;
+  text-shadow: -1px 1px 1px #000;
 
+}
 .container1 {
   background-color: rgba(154, 190, 187, 0.4);
   /* color: white; */
