@@ -12,17 +12,17 @@ import { AuthGuard } from './gaurd/auth.guard';
 import { HomePageComponent } from './components/home-page/home-page.component';
 
 const routes: Routes=[{path:'', redirectTo: 'home', pathMatch: 'full'},
-{ path: 'home', component: HomePageComponent,  canActivate: [AuthGuard] },
-{ path: 'doctor', component: ViewDoctorComponent,  canActivate: [AuthGuard] },
-{ path: 'doctor/:docId', component: UpdateDoctorComponent, canActivate: [AuthGuard] },
+{ path: 'home', component: HomePageComponent },
+{ path: 'doctor', component: ViewDoctorComponent },
+{ path: 'doctor/:docId', component: UpdateDoctorComponent },
 { path: 'specialization', component: ViewSpecializationComponent },
-{ path: 'specialization/:specializationCode', component: ViewDoctorComponent, canActivate: [AuthGuard] },
+{ path: 'specialization/:specializationCode', component: ViewDoctorComponent },
 { path: 'updatedoctors', component: UpdateDoctorComponent},
 { path: 'todaySurgery', component: ViewTodaysSurgeryComponent },
 { path: 'addDoctor', component: AddDoctorComponent },
-{ path: 'editSurgery/:surgeryId', component: UpdateSurgeryComponent, canActivate: [AuthGuard] },
-{ path: 'registration', component: RegistrationPageComponent},
-{ path: 'login', component: LoginPageComponent},
+{ path: 'editSurgery/:surgeryId', component: UpdateSurgeryComponent },
+// { path: 'registration', component: RegistrationPageComponent},
+// { path: 'login', component: LoginPageComponent},
 
 ];
 @NgModule({
