@@ -15,6 +15,7 @@ export class UpdateSurgeryComponent {
   surgeryForm!: FormGroup;
   // alertClass = ""
   // textMessage = ""
+  
   loading=false;
   constructor(private fb: FormBuilder, private route: Router, private http: DataService) {
     this.surgery = route.getCurrentNavigation()?.extras.state?.['data'];

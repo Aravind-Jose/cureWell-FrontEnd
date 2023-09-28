@@ -27,10 +27,25 @@
       </tbody>
 
     </table>
+
+    <!-- <div class="row container-fluid card-deck" *ngIf="!loading">
+      <div class="col-4 bg-dark text-center text-white border-0 p-2" *ngFor=" let doctor of doctors">
+        <div class="card container bg-dark border-0">
+          <div class="card-body">
+            <h5 class="card-title">{{doctor.DoctorName}}</h5>
+            Doctor ID : {{doctor.DoctorId}}
+          </div>
+
+        </div>
+        <div class="row">
+          <div class="col-6"><button (click)="editDoctor(doctor)" class="btn btn-primary">Edit</button></div>
+          <div class="col-6"><button (click)="deleteDoctor(doctor.DoctorId)" class="btn btn-danger">Remove</button>
+          </div>
+        </div>
+      </div>
+    </div> -->
     <br>
   </div>
-
-  
 </section>
 <br>
 <app-spinner *ngIf="loading"></app-spinner>
