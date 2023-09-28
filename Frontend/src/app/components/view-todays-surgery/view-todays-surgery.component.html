@@ -21,12 +21,12 @@
             </thead>
             <tbody>
                 <tr *ngFor="let surgery of surgeries">
-                    <td>{{surgery.SurgeryId}}</td>
-                    <td>{{surgery.DoctorId}}</td>
-                    <td>{{surgery.SurgeryDate}}</td>
-                    <td>{{surgery.StartTime}}</td>
-                    <td>{{surgery.EndTime}}</td>
-                    <td>{{surgery.SurgeryCategory}}</td>
+                    <td class="pt-4">{{surgery.SurgeryId}}</td>
+                    <td class="pt-4">{{surgery.DoctorId}}</td>
+                    <td class="pt-4">{{surgery.SurgeryDate}}</td>
+                    <td class="pt-4">{{surgery.StartTime}}</td>
+                    <td class="pt-4">{{surgery.EndTime}}</td>
+                    <td class="pt-4">{{surgery.SurgeryCategory}}</td>
                     <td>
                         <button class="btn btn-primary" (click)="editSurgery(surgery)">Edit</button>
                     </td>
