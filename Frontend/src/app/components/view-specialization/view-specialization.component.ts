@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { faL } from '@fortawesome/free-solid-svg-icons';
 import { ISpecialization } from 'src/app/models/specialization.model';
 import { DataService } from 'src/app/services/data.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-view-specialization',
@@ -41,6 +42,8 @@ export class ViewSpecializationComponent {
         this.textMessage = 'Error fetching Specializations';
         this.alertClass = 'alert alert-danger';
         console.error(this.textMessage);
+        Swal.fire('Failed to Load','','error');
+    this.router.navigate(['/home'])
       });
   }
 

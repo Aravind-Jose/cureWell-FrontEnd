@@ -8,9 +8,6 @@ import { AddDoctorComponent } from './components/add-doctor/add-doctor.component
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { UpdateSurgeryComponent } from './components/update-surgery/update-surgery.component';
 import { UpdateDoctorComponent } from './components/update-doctor/update-doctor.component';
-import { RegistrationPageComponent } from './pages/registration-page/registration-page.component';
-import { LoginPageComponent } from './pages/login-page/login-page.component';
-
 
 import { FormsModule,ReactiveFormsModule } from "@angular/forms";
 import { ViewDoctorComponent } from './components/view-doctor/view-doctor.component';
@@ -32,8 +29,6 @@ import { HomePageComponent } from './components/home-page/home-page.component';
     ViewSpecializationComponent,
     ViewTodaysSurgeryComponent,
     UpdateDoctorComponent,
-    LoginPageComponent,
-    RegistrationPageComponent,
     FooterComponent,
     HomePageComponent,
     SpinnerComponent

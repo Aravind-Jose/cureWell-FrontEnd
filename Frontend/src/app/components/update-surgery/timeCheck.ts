@@ -10,9 +10,6 @@ export function timeCheck(StartTime: string, EndTime: string) {
         if(startTime.errors||endTime.errors){
            return null;
         }
-        console.log("a= "+startTime.value)
-        console.log("b= "+endTime.value)
-
         if (Number(startTime.value) >= Number(endTime.value)) {
             endTime.setErrors({ timeError: true });
         } else {

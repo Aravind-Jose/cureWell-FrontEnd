@@ -57,6 +57,8 @@ export class ViewDoctorComponent {
       },
       (error)=>{
         this.loading=false;
+        Swal.fire('Failed to Load','','error');
+    this.router.navigate(['/home'])
       }
       );
       console.log("cate " + this.category);
@@ -76,11 +78,15 @@ export class ViewDoctorComponent {
           });
           console.log('Final')
           console.log(this.doctors);
+          
+
         });
 
       },
       (error)=>{
         this.loading=false;
+        Swal.fire('Failed to Load','','error');
+    this.router.navigate(['/home'])
       }
       
       );
@@ -106,8 +112,6 @@ export class ViewDoctorComponent {
       },
       (error) => {
         //In case of error
-
-
         Swal.fire('Failed to Delete', '', 'error')
       }
     )

@@ -24,10 +24,6 @@ export class UpdateDoctorComponent {
     console.log(this.doctorModel);
     this.dataService.updateDoctor(this.doctorModel).subscribe(
       (response) => {
-        //On successful excecution of service
-        // this.textMessage = 'Updated successfully right now';
-        // this.alertClass = 'alert alert-success';
-        // console.log(this.textMessage);
     this.loading=false;
 
         Swal.fire('Successfully Updated','','success')
@@ -36,17 +32,9 @@ export class UpdateDoctorComponent {
 
       (error) => {
     this.loading=false;
-        
-        //In case of error
-        // this.textMessage = 'Some error occured';
-        // this.alertClass = 'alert alert-danger';
-        // console.error(this.textMessage);
-
         Swal.fire('Failed to Update','','error')
       }
-  );  
-  
-      
+  );       
 }
 }
 

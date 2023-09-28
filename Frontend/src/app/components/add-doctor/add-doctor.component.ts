@@ -14,45 +14,25 @@ import { HttpClientModule } from '@angular/common/http';
   styleUrls: ['./add-doctor.component.css']
 })
 export class AddDoctorComponent {
-  // message: string = '';
-  // textMessage = ""
-  // alertClass = ""
-  loading=false;
-  doctorModel=new Doctor();
-  addDoctorResponse:boolean=true;
-  constructor(private dataService:DataService, private router:Router){
-
-  }
-
-  //added display
-  // displayMessage(){
-  //    this.message = 'Doctor successfully added'
-  // }
-  addDoctor(){
+  loading = false;
+  doctorModel = new Doctor();
+  addDoctorResponse: boolean = true;
+  constructor(private dataService: DataService, private router: Router) { }
+  addDoctor() {
     console.log(this.doctorModel);
-    this.loading=true;
-    this.dataService.addDoctor(this.doctorModel).subscribe( 
+    this.loading = true;
+    this.dataService.addDoctor(this.doctorModel).subscribe(
       (response) => {
-    this.loading=false;
-    this.addDoctorResponse=response;
-        //On successful excecution of service
-        // this.textMessage = 'Doctors Fetched Successfully';
-        // this.alertClass = 'alert alert-success';
-        // console.log(this.textMessage);
-        Swal.fire('Successfully Inserted','','success')
+        this.loading = false;
+        this.addDoctorResponse = response;
+        Swal.fire('Successfully Inserted', '', 'success')
         this.router.navigate(['/doctor']);
       },
 
       (error) => {
-        this.loading=false;
-        //In case of error
-        // this.textMessage = 'Error fetching doctors';
-        // this.alertClass = 'alert alert-danger';
-        // console.error(this.textMessage);
-        Swal.fire('Failed to Insert','','error')
+        this.loading = false;
+        Swal.fire('Failed to Insert', '', 'error')
       }
-  );
-     
-     
+    );
   }
 }

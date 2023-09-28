@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { ISurgery } from 'src/app/models/surgery.model';
 import { DataService } from 'src/app/services/data.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-view-todays-surgery',
@@ -39,7 +40,8 @@ export class ViewTodaysSurgeryComponent {
         //In case of error
         this.loading = false;
         
-
+        Swal.fire('Failed to Load','','error');
+    this.router.navigate(['/home'])
         this.textMessage = 'Error fetching Specializations';
         this.alertClass = 'alert alert-danger';
         console.error(this.textMessage);

@@ -1,8 +1,9 @@
-nav{
+nav {
 
   background-color: #78D6C6;
 
 }
+
 .navbar-nav,
 .mr-auto {
   flex: 0.9;
@@ -28,7 +29,7 @@ h4 {
   color: gainsboro;
 }
 
-.active-link h4{
+.active-link h4 {
   color: white;
 }
 
@@ -40,8 +41,6 @@ h4 {
 
 
 h4:hover {
-  font-size: 28px; 
-  color: white; 
+  font-size: 28px;
+  color: white;
 }
-
-

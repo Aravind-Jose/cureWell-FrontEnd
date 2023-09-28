@@ -6,9 +6,6 @@ import { UpdateDoctorComponent } from './components/update-doctor/update-doctor.
 import { ViewSpecializationComponent } from './components/view-specialization/view-specialization.component';
 import { ViewTodaysSurgeryComponent } from './components/view-todays-surgery/view-todays-surgery.component';
 import { AddDoctorComponent } from './components/add-doctor/add-doctor.component';
-import { RegistrationPageComponent } from './pages/registration-page/registration-page.component';
-import { LoginPageComponent } from './pages/login-page/login-page.component';
-import { AuthGuard } from './gaurd/auth.guard';
 import { HomePageComponent } from './components/home-page/home-page.component';
 
 const routes: Routes=[{path:'', redirectTo: 'home', pathMatch: 'full'},
